@@ -3,7 +3,14 @@ import React, { useState,useEffect } from 'react';
 const MainContent = () => {
     const [prod, setProd] = useState([]);
   const [products, setProducts] = useState([]);
-  const url = 'https://dummyjson.com/products?limit=30';
+  const isMobile = window.innerWidth <= 600;
+    var url;
+    if (isMobile) {
+        url ='https://dummyjson.com/products?limit=18'
+    } else {
+        url = 'https://dummyjson.com/products?limit=40';
+    }
+    console.log(url);
 
   useEffect(() => {
     fetch(url)
@@ -19,7 +26,6 @@ const MainContent = () => {
     const [filterDropdownVisible, setFilterDropdownVisible] = useState(false);
     const [sortDropdownVisible, setSortDropdownVisible] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const isMobile = window.innerWidth <= 600;
     const [productsPerPage] = useState(isMobile ? 3 : 6);
 
     const handleFilter = (category) => {
