@@ -3,7 +3,7 @@ import React, { useState,useEffect } from 'react';
 const MainContent = () => {
     const [prod, setProd] = useState([]);
   const [products, setProducts] = useState([]);
-  const url = 'https://dummyjson.com/products?limit=50';
+  const url = 'https://dummyjson.com/products?limit=30';
 
   useEffect(() => {
     fetch(url)
