@@ -238,6 +238,10 @@ button {
   min-width: 160px;
   z-index: 1;
 }
+.active {
+  background-color: #fe8033;
+  color: #fff;
+}
 
 .dropdown-content button {
   display: block;
@@ -263,6 +267,7 @@ button:hover, .dropdown-content button:hover {
 }
 #bnh{
   margin-right: 10px;
+  border-radius: 15px;
 }
 @media only screen and (max-width: 600px) {
   .filter-sort-dropdowns{

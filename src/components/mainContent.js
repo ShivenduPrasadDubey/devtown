@@ -17,7 +17,7 @@ const MainContent = () => {
       .then((response) => response.json())
       .then((data) => {
         setProd(data.products);
-        setProducts(data.products); // Set products after fetching data
+        setProducts(data.products);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, [url]);
@@ -66,9 +66,9 @@ const MainContent = () => {
     const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
     const listItems = currentProducts.map((item) => (
-        <div className="card" key={item.id}>
+        <div className="card product-card" key={item.id}>
             <div className="card_img">
-                <img src={item.thumbnail} alt={item.title} />
+                <img src={item.thumbnail} alt={item.title} style={{ width: '300px', height: '200px', borderRadius: '30px' }}/>
             </div>
             <div className="card_header">
                 <h2>{item.title}</h2>
