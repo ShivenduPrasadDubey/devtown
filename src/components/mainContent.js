@@ -122,8 +122,8 @@ const MainContent = () => {
                     </button>
                     {sortDropdownVisible && (
                         <div className="dropdown-content">
-                            <button onClick={() => handleSort('ascending')}>Ascending</button>
-                            <button onClick={() => handleSort('descending')}>Descending</button>
+                            <button onClick={() => handleSort('ascending')}>Low to High</button>
+                            <button onClick={() => handleSort('descending')}>High to Low</button>
                         </div>
                     )}
                 </div>
