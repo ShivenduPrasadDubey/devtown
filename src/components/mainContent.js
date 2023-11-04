@@ -33,6 +33,7 @@ const MainContent = () => {
             setProducts(prod);
         } else {
             const filteredProducts = prod.filter((product) => product.category === category);
+            setCurrentPage(1);
             setProducts(filteredProducts);
         }
         setFilter(category);
